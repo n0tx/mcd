@@ -1,8 +1,8 @@
 # Technical Information
 
-## Daftar Isi
-
 ---
+
+## Daftar Isi
 
 1. [Request Methods](#request-methods)  
 2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
@@ -257,9 +257,13 @@ HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
 
+<div align="right">
+  [Kembali ke Daftar Isi](#daftar-isi)
+</div>
+  
 ---
 
-2. ## `Form-data dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
+2. ## `Form-data dan x-www-form-urlencoded` | 
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
@@ -336,9 +340,11 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
 
-[Daftar Isi](#daftar-isi)
+<div align="right">
+  [Kembali ke Daftar Isi](#daftar-isi)
+</div>
 
-## [Daftar Isi](#daftar-isi)
+----
 
 
 
