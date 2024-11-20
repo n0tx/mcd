@@ -1,11 +1,11 @@
 # Technical Information
 
-1. [Request Methods](#request-methods)  
-2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+1. [Request Methods](#Request-methods)
+2. [Form-data dan x-www-form-urlencoded](#Form-data-dan-x-www-form-urlencoded)
 
 ---
 
-## 1. `Request Methods`
+## 1. Request Methods
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
 melalui protokol HTTP.   
@@ -254,7 +254,7 @@ Allow: GET, POST, PUT, DELETE
 
 ---
 
-## 2. `Form-data dan x-www-form-urlencoded`
+## 2. Form-data dan x-www-form-urlencoded
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
