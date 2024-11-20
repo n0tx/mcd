@@ -273,7 +273,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   Format ini digunakan untuk mengirimkan data dalam bentuk multipart (berpotongan),
   memungkinkan pengiriman file atau data yang kompleks seperti teks dan binary secara bersamaan.
   
-- **Karakteristik**:
+- **Karakteristik**
   - Data dipisah menjadi bagian-bagian (multipart) dengan boundary unik.
   - Cocok untuk mengunggah file karena dapat mengirimkan binary data.
   - Setiap bagian data memiliki header terpisah (termasuk metadata seperti nama file dan tipe konten).
@@ -297,7 +297,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 - **Penjelasan**
   Data dikodekan sebagai pasangan kunci-nilai dalam format URL-encoded (seperti query string pada URL).
   
-- **Karakteristik**:
+- **Karakteristik**
   - Data dikirim dalam satu blok sebagai teks biasa.
   - Setiap pasangan kunci-nilai dipisahkan oleh &, dan karakter khusus (seperti spasi) dikodekan (misalnya, spasi menjadi %20).
   - Tidak mendukung pengiriman file atau binary data.
