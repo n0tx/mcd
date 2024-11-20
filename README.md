@@ -346,13 +346,21 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 pengembang dapat dengan mudah membuat, menguji, dan memahami cara kerja API, baik bagi klien maupun server.  
   
 - **Fitur Utama**
-  - **OpenAPI Specification (OAS)**  
+
+  - **OpenAPI Specification (OAS)**
+  
     Swagger mendukung spesifikasi OpenAPI untuk mendeskripsikan endpoint API secara standar.
-  - **Swagger UI**  
+    
+  - **Swagger UI**
+  
     Menyediakan antarmuka berbasis web untuk mencoba endpoint API secara interaktif.
-  - **Code Generation**  
+
+  - **Code Generation**
+
     Dapat menghasilkan kode klien atau server berdasarkan dokumentasi API.
-  - **Kolaborasi**  
+    
+  - **Kolaborasi**
+
     Mempermudah kolaborasi antar tim dengan dokumentasi API yang selalu up-to-date.
   
 - **Keuntungan**:  
@@ -369,15 +377,25 @@ Postman digunakan oleh pengembang untuk memastikan API bekerja sesuai spesifikas
 dengan fitur antarmuka pengguna yang intuitif.
   
 - **Fitur Utama**
-  - **API Testing**  
+
+  - **API Testing**
+
     Memungkinkan pengujian endpoint API dengan metode HTTP seperti GET, POST, PUT, DELETE, dll.
-  - **Environment Variables**  
-    Mendukung penggunaan variabel untuk mengelola pengujian di berbagai lingkungan (development, staging, production).
-  - **Automation**  
+    
+  - **Environment Variables**
+
+    Mendukung penggunaan variabel untuk mengelola pengujian di berbagai lingkungan (development, staging, production)
+
+  - **Automation**
+
     Menyediakan fitur untuk membuat pengujian otomatis melalui koleksi (collections) dan skrip.
-  - **API Documentation**  
+
+  - **API Documentation**
+
     Dapat menghasilkan dokumentasi API secara langsung dari koleksi request.
-  - **Collaboration**  
+
+  - **Collaboration**
+
     Fitur berbasis cloud untuk berbagi dan mengelola koleksi API antar tim.
   
 **Keuntungan**:
@@ -402,6 +420,7 @@ Berikut adalah penjelasan untuk status code **200**, **400**, dan **500**
 Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server tanpa masalah.
 
 - **Konteks Penggunaan**
+
   - **GET**: Data yang diminta berhasil dikembalikan (misalnya, halaman web, API JSON).
   - **POST**: Permintaan berhasil diproses, dan server telah melakukan tindakan sesuai permintaan.
   - **PUT/DELETE**: Tindakan berhasil diterapkan.
@@ -417,6 +436,7 @@ Status ini menunjukkan bahwa permintaan yang dikirim oleh klien tidak valid atau
 Ini biasanya terjadi karena kesalahan dari sisi klien.
 
 - **Konteks Penggunaan**
+
   - Data yang dikirim tidak sesuai dengan format yang diharapkan server.
   - Parameter yang wajib ada tidak disertakan dalam permintaan.
   - Kesalahan dalam sintaksis permintaan (misalnya, JSON tidak valid).
@@ -431,6 +451,7 @@ Status ini menunjukkan bahwa terjadi kesalahan di sisi server saat memproses per
 tetapi penyebab spesifiknya tidak dapat dijelaskan dalam respons.
 
 - **Konteks Penggunaan**
+
   - Server gagal menyelesaikan permintaan karena bug dalam kode server.
   - Masalah konfigurasi atau kesalahan sistem internal di server.
   - Server tidak dapat menangani permintaan karena kondisi tak terduga.
