@@ -3,7 +3,6 @@
 ## Daftar Isi
 
 1. [Request Methods](#request-methods)  
-2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 
 
 ----
@@ -258,83 +257,7 @@ Allow: GET, POST, PUT, DELETE
   
 ---
 
-2. ## `Form-data Dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
 
-**Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
-terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
-
-**Adapun perbedaannya**:
-
-### 1. **Form-data**
-
-- **Penjelasan**  
-  Format ini digunakan untuk mengirimkan data dalam bentuk multipart (berpotongan),
-  memungkinkan pengiriman file atau data yang kompleks seperti teks dan binary secara bersamaan.
-  
-- **Karakteristik**
-  - Data dipisah menjadi bagian-bagian (multipart) dengan boundary unik.
-  - Cocok untuk mengunggah file karena dapat mengirimkan binary data.
-  - Setiap bagian data memiliki header terpisah (termasuk metadata seperti nama file dan tipe konten).
-
-- **Header HTTP**
-  Content-Type: multipart/form-data; boundary=...
-
-- **Contoh Penggunaan**
-  - Mengunggah gambar, video, atau file lainnya.
-  - Formulir dengan kombinasi file dan teks (misalnya, nama pengguna dan foto profil).
-
-- **Keuntungan**
-  - Dapat menangani berbagai tipe data, termasuk binary.
-  - Fleksibel untuk data besar.
-
-- **Kekurangan**
-  - Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
-
-### 2. **x-www-form-urlencoded**
-
-- **Penjelasan**
-  Data dikodekan sebagai pasangan kunci-nilai dalam format URL-encoded (seperti query string pada URL).
-  
-- **Karakteristik**
-  - Data dikirim dalam satu blok sebagai teks biasa.
-  - Setiap pasangan kunci-nilai dipisahkan oleh &, dan karakter khusus (seperti spasi) dikodekan (misalnya, spasi menjadi %20).
-  - Tidak mendukung pengiriman file atau binary data.
-
-- **Header HTTP**
-  Content-Type: application/x-www-form-urlencoded
-
-- **Contoh Penggunaan**
-  - Formulir dengan teks sederhana (misalnya, nama dan email).
-  - Data yang akan dikirim dalam format yang lebih ringan.
-
-- **Keuntungan**
-  - Lebih ringan dan sederhana dibandingkan dengan form-data.
-  - Sangat cocok untuk data kecil dan hanya teks.
-
-- **Kekurangan**
-  - Tidak dapat mengirim file atau data binary.
-  - Tidak ideal untuk data yang sangat besar.
-
-### Perbandingan Utama:
-
-| **Aspek**               | **form-data**                                     | **x-www-form-urlencoded**                         |
-|--------------------------|--------------------------------------------------|--------------------------------------------------|
-| **Format Data**          | Data dikirim dalam format multipart, dipecah menjadi bagian-bagian terpisah dengan boundary khusus. | Data dikirim dalam format URL-encoded, seperti `key=value&key2=value2`. |
-| **Ukuran Data**          | Mendukung file dan data besar tanpa batas praktis (tergantung batas server). | Cocok untuk data kecil hingga sedang (tidak optimal untuk file atau data besar). |
-| **Media Type**           | `multipart/form-data`                           | `application/x-www-form-urlencoded`             |
-| **Dukungan File Upload** | Mendukung upload file (binary data, seperti gambar atau dokumen). | Tidak mendukung file upload (hanya data teks).   |
-| **Efisiensi**            | Lebih kompleks dan sedikit lebih lambat karena multipart processing. | Lebih sederhana dan lebih cepat karena encoding sederhana. |
-| **Penggunaan Umum**      | Digunakan untuk form yang mengirimkan file atau kombinasi file dan teks. | Digunakan untuk form sederhana seperti login, pencarian, atau data kecil lainnya. |
-| **Contoh Payload**       | ``` --boundary\r\nContent-Disposition: form-data; name="file"; filename="image.png"\r\nContent-Type: image/png\r\n\r\n...binary data...\r\n--boundary-- ``` | ``` username=johndoe&password=123456 ``` |
-| **Kompatibilitas Browser** | Didukung oleh browser untuk pengiriman form dengan file. | Didukung oleh browser untuk semua pengiriman form tanpa file. |
-| **Keamanan**             | Sama aman dengan HTTPS, tetapi boundary memisahkan data sehingga lebih fleksibel. | Sama aman dengan HTTPS, tetapi semua data di-encode dalam satu string. |
-
-
-### Catatan
-- **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
-- **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
-
-----
 
 
 
