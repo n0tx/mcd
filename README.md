@@ -4,6 +4,7 @@
 
 1. [Request Methods](#request-methods)
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 
 
 ----
@@ -335,4 +336,75 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
 
+----
+
+3. ## `Aplikasi Dokumentasi API`
+
+### 1. **Swagger**  
+  
+**Swagger** adalah sebuah alat yang digunakan untuk mendokumentasikan dan mendesain API. Dengan Swagger,   
+pengembang dapat dengan mudah membuat, menguji, dan memahami cara kerja API, baik bagi klien maupun server.  
+  
+- **Fitur Utama**
+
+  - **OpenAPI Specification (OAS)**
+  
+    Swagger mendukung spesifikasi OpenAPI untuk mendeskripsikan endpoint API secara standar.
+    
+  - **Swagger UI**
+  
+    Menyediakan antarmuka berbasis web untuk mencoba endpoint API secara interaktif.
+
+  - **Code Generation**
+
+    Dapat menghasilkan kode klien atau server berdasarkan dokumentasi API.
+    
+  - **Kolaborasi**
+
+    Mempermudah kolaborasi antar tim dengan dokumentasi API yang selalu up-to-date.
+  
+- **Keuntungan**
+
+  - Mempermudah integrasi antar sistem.
+  - Mengurangi kesalahan pemahaman karena dokumentasi otomatis.
+  - Mendukung hampir semua bahasa pemrograman dan platform API modern.
+  
+Swagger banyak digunakan dalam proyek RESTful API untuk menjaga transparansi dan efisiensi pengembangan.  
+  
+### 2. **Postman**
+  
+**Postman** adalah alat yang populer untuk menguji, mendokumentasikan, dan mengelola API.   
+Postman digunakan oleh pengembang untuk memastikan API bekerja sesuai spesifikasi   
+dengan fitur antarmuka pengguna yang intuitif.
+  
+- **Fitur Utama**
+
+  - **API Testing**
+
+    Memungkinkan pengujian endpoint API dengan metode HTTP seperti GET, POST, PUT, DELETE, dll.
+    
+  - **Environment Variables**
+
+    Mendukung penggunaan variabel untuk mengelola pengujian di berbagai lingkungan (development, staging, production)
+
+  - **Automation**
+
+    Menyediakan fitur untuk membuat pengujian otomatis melalui koleksi (collections) dan skrip.
+
+  - **API Documentation**
+
+    Dapat menghasilkan dokumentasi API secara langsung dari koleksi request.
+
+  - **Collaboration**
+
+    Fitur berbasis cloud untuk berbagi dan mengelola koleksi API antar tim.
+  
+**Keuntungan**  
+
+- Mudah digunakan, bahkan untuk pemula.
+- Mendukung debugging API dengan menampilkan request dan response secara detail.
+- Menghemat waktu dengan koleksi yang dapat dieksekusi ulang.
+  
+Postman banyak digunakan dalam pengembangan API modern karena fleksibilitas dan kemudahan penggunaannya.
+  
 ----
