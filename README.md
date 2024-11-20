@@ -408,3 +408,54 @@ dengan fitur antarmuka pengguna yang intuitif.
 Postman banyak digunakan dalam pengembangan API modern karena fleksibilitas dan kemudahan penggunaannya.
   
 ----
+
+4. ## `HTTP Status Code`
+  
+**HTTP status code**  adalah kode respons yang diberikan oleh server untuk menunjukkan status permintaan HTTP yang dilakukan oleh klien.  
+
+Berikut adalah penjelasan untuk status code **200**, **400**, dan **500**  
+  
+### 1. **HTTP Status Code 200 (OK)**
+
+- **Pengertian**  
+
+Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server tanpa masalah.
+
+- **Konteks Penggunaan**
+
+  - **GET**: Data yang diminta berhasil dikembalikan (misalnya, halaman web, API JSON).
+  - **POST**: Permintaan berhasil diproses, dan server telah melakukan tindakan sesuai permintaan.
+  - **PUT/DELETE**: Tindakan berhasil diterapkan.
+
+- **Contoh JSON**
+
+
+### 2. **HTTP Status Code 400 (Bad Request)**
+
+- **Pengertian**
+
+Status ini menunjukkan bahwa permintaan yang dikirim oleh klien tidak valid atau tidak dapat dipahami oleh server.  
+Ini biasanya terjadi karena kesalahan dari sisi klien.
+
+- **Konteks Penggunaan**
+
+  - Data yang dikirim tidak sesuai dengan format yang diharapkan server.
+  - Parameter yang wajib ada tidak disertakan dalam permintaan.
+  - Kesalahan dalam sintaksis permintaan (misalnya, JSON tidak valid).
+
+- **Contoh JSON**
+
+### 3. **HTTP Status Code 500 (Internal Server Error)**  
+
+- **Pengertian**
+
+Status ini menunjukkan bahwa terjadi kesalahan di sisi server saat memproses permintaan,  
+tetapi penyebab spesifiknya tidak dapat dijelaskan dalam respons.
+
+- **Konteks Penggunaan**
+
+  - Server gagal menyelesaikan permintaan karena bug dalam kode server.
+  - Masalah konfigurasi atau kesalahan sistem internal di server.
+  - Server tidak dapat menangani permintaan karena kondisi tak terduga.
+
+- **Contoh JSON**
