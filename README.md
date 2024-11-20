@@ -52,8 +52,7 @@ GET /users HTTP/1.1 Host: api.example.com
 
 - **Penjelasan**
 
-  Digunakan untuk mengirim data ke server untuk diproses.  
-  Metode ini sering digunakan untuk membuat atau menambahkan data baru di server.
+  Digunakan untuk mengirim data ke server untuk diproses. Metode ini sering digunakan untuk membuat atau menambahkan data baru di server.
 
 - **Contoh Penggunaan**
 
@@ -276,6 +275,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   - Setiap bagian data memiliki header terpisah (termasuk metadata seperti nama file dan tipe konten).
 
 - **Header HTTP**
+
   Content-Type: multipart/form-data; boundary=...
 
 - **Contoh Penggunaan**
@@ -301,6 +301,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   - Tidak mendukung pengiriman file atau binary data.
 
 - **Header HTTP**
+
   Content-Type: application/x-www-form-urlencoded
 
 - **Contoh Penggunaan**
