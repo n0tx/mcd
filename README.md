@@ -95,9 +95,8 @@ Content-Type: application/json
 
 - **Penjelasan**
 
-  Digunakan untuk memperbarui atau mengganti data di server.  
-  Biasanya menggantikan seluruh data dengan data baru.
-
+  Digunakan untuk memperbarui atau mengganti data di server. Biasanya menggantikan seluruh data dengan data baru.
+  
 - **Contoh Penggunaan**
 
   - Memperbarui profil pengguna.
@@ -137,8 +136,7 @@ Content-Type: application/json
 
 - **Penjelasan**
 
-  Digunakan untuk memperbarui sebagian data di server.  
-  Tidak seperti PUT, hanya sebagian dari data yang diperbarui.
+  Digunakan untuk memperbarui sebagian data di server. Tidak seperti PUT, hanya sebagian dari data yang diperbarui.
 
 - **Contoh Penggunaan**
 
@@ -267,7 +265,8 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 
 ### 1. **Form-data**
 
-- **Penjelasan**  
+- **Penjelasan**
+
   Format ini digunakan untuk mengirimkan data dalam bentuk multipart (berpotongan),
   memungkinkan pengiriman file atau data yang kompleks seperti teks dan binary secara bersamaan.
   
@@ -293,6 +292,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 ### 2. **x-www-form-urlencoded**
 
 - **Penjelasan**
+
   Data dikodekan sebagai pasangan kunci-nilai dalam format URL-encoded (seperti query string pada URL).
   
 - **Karakteristik**
