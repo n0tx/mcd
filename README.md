@@ -10,7 +10,7 @@
 
 ---
 
-1. ## `Request Methods` | [Daftar Isi](#daftar-isi)
+1. ## `Request Methods`
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
 melalui protokol HTTP.   
@@ -291,6 +291,8 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 - **Kekurangan**
   - Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
 
+[Daftar Isi](#daftar-isi)
+
 ### 2. **x-www-form-urlencoded**
 
 - **Penjelasan**
@@ -335,6 +337,9 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 ### Catatan
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
+
+[Daftar Isi](#daftar-isi)
+
 
 ## Using-Docker
 
