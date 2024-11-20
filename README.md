@@ -4,7 +4,6 @@
 
 1. [Request Methods](#request-methods)  
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
-3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 
 
 ----
