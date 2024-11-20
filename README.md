@@ -256,14 +256,10 @@ Host: api.example.com
 HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
-
-<div align="right">
-  [Kembali ke Daftar Isi](#daftar-isi)
-</div>
   
 ---
 
-2. ## `Form-data dan x-www-form-urlencoded` | 
+2. ## `Form-data dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
@@ -334,15 +330,10 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 | **Kompatibilitas Browser** | Didukung oleh browser untuk pengiriman form dengan file. | Didukung oleh browser untuk semua pengiriman form tanpa file. |
 | **Keamanan**             | Sama aman dengan HTTPS, tetapi boundary memisahkan data sehingga lebih fleksibel. | Sama aman dengan HTTPS, tetapi semua data di-encode dalam satu string. |
 
----
 
 ### Catatan
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
-
-<div align="right">
-  [Kembali ke Daftar Isi](#daftar-isi)
-</div>
 
 ----
 
