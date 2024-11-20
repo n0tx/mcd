@@ -1,8 +1,10 @@
 # Technical Information
 
 - [Using Docker](#using-docker) Or
-1. [Request Methods](#request-methods)
-2. [Form-data dan x www form urlencoded](#form-data-dan-x-www-form-urlencoded)
+- [Request Methods](#request-methods) Or
+- [Form data dan x www form urlencoded](#form-data-dan-x-www-form-urlencoded) Or
+
+
 
 ---
 
@@ -255,7 +257,7 @@ Allow: GET, POST, PUT, DELETE
 
 ---
 
-## 2. Form-data dan x-www-form-urlencoded
+## 2. Form data dan x www form urlencoded
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
