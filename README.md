@@ -1,11 +1,18 @@
-# Request Methods
+# Technical Information
+
+1. [Request Methods](#request-methods)  
+2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+
+---
+
+## 1. Request Methods
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
 melalui protokol HTTP.   
 
 Beberapa metode request yang umum digunakan:
 
-## 1. **GET**
+### 1. **GET**
 
 - **Penjelasan**
 
@@ -37,7 +44,7 @@ GET /users HTTP/1.1 Host: api.example.com
 }
 ```
 
-## 2. **POST**
+### 2. **POST**
 
 - **Penjelasan**
 
@@ -80,7 +87,7 @@ Content-Type: application/json
 }
 ```
 
-## 3. **PUT**
+### 3. **PUT**
 
 - **Penjelasan**
 
@@ -122,7 +129,7 @@ Content-Type: application/json
 }
 ```
 
-## 4. **PATCH**
+### 4. **PATCH**
 
 - **Penjelasan**
 
@@ -163,7 +170,7 @@ Content-Type: application/json
 }
 ```
 
-## 5. **DELETE**
+### 5. **DELETE**
 
 - **Penjelasan**
 
@@ -191,7 +198,7 @@ Host: api.example.com
 }
 ```
 
-## 6. **HEAD**
+### 6. **HEAD**
 
 - **Penjelasan**
 
@@ -219,7 +226,7 @@ Content-Type: application/json
 Content-Length: 123
 ```
 
-## 7. **OPTIONS**
+### 7. **OPTIONS**
 
 - **Penjelasan**
 
@@ -245,14 +252,16 @@ HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
 
-# Form-data dan x-www-form-urlencoded
+---
+
+## 2. Form-data dan x-www-form-urlencoded
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
 
 **Adapun perbedaannya**:
 
-## 1. **Form-data**
+### 1. **Form-data**
 
 - **Penjelasan**  
   Format ini digunakan untuk mengirimkan data dalam bentuk multipart (berpotongan),
@@ -277,7 +286,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 - **Kekurangan**
   - Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
 
-## 2. **x-www-form-urlencoded**
+### 2. **x-www-form-urlencoded**
 
 - **Penjelasan**
   Data dikodekan sebagai pasangan kunci-nilai dalam format URL-encoded (seperti query string pada URL).
@@ -302,7 +311,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   - Tidak dapat mengirim file atau data binary.
   - Tidak ideal untuk data yang sangat besar.
 
-## Perbandingan Utama:
+### Perbandingan Utama:
 
 | **Aspek**               | **form-data**                                     | **x-www-form-urlencoded**                         |
 |--------------------------|--------------------------------------------------|--------------------------------------------------|
@@ -318,7 +327,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 
 ---
 
-## Catatan
+### Catatan
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
 
