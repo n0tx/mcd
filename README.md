@@ -3,8 +3,8 @@
 ## Daftar Isi
 
 1. [Request Methods](#request-methods)  
-2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
-3. [Aplikasi dokumentasi API](#aplikasi-dokumentasi-api)
+2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 4. 
 
 
@@ -260,7 +260,7 @@ Allow: GET, POST, PUT, DELETE
   
 ---
 
-2. ## `Form-data dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
+2. ## `Form-data Dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
@@ -338,7 +338,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 
 ----
 
-3. ## `Aplikasi dokumentasi API` | [Daftar Isi](#daftar-isi)
+3. ## `Aplikasi Dokumentasi API` | [Daftar Isi](#daftar-isi)
 
 ### 1. **Swagger**  
   
