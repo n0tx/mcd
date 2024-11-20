@@ -427,9 +427,24 @@ Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server
   - **POST**: Permintaan berhasil diproses, dan server telah melakukan tindakan sesuai permintaan.
   - **PUT/DELETE**: Tindakan berhasil diterapkan.
 
-- **Contoh JSON**
+- **Contoh Kasus**
 
+  - **GET** Request
+  
+  Klien meminta daftar produk dari API dengan endpoint /products, dan server mengembalikan data daftar produk dalam format JSON.
 
+```json
+Status: 200 OK  
+Body: [
+  { "id": 1, "name": "Laptop" },
+  { "id": 2, "name": "Smartphone" }
+]
+```
+
+  - **POST** Request
+
+  Klien mengirimkan data pengguna baru ke endpoint /users, dan server berhasil menyimpan data tersebut.
+  
 ### 2. **HTTP Status Code 400 (Bad Request)**
 
 - **Pengertian**
@@ -443,7 +458,27 @@ Ini biasanya terjadi karena kesalahan dari sisi klien.
   - Parameter yang wajib ada tidak disertakan dalam permintaan.
   - Kesalahan dalam sintaksis permintaan (misalnya, JSON tidak valid).
 
-- **Contoh JSON**
+- **Contoh Kasus**
+
+  - Klien mengirimkan permintaan untuk menambahkan pengguna baru ke endpoint `/users`, tetapi tidak menyertakan data wajib seperti `email`:
+  
+```json
+Request: POST /users  
+Body: { "name": "John" }
+Response: 
+Status: 400 Bad Request  
+Body: { "error": "Email is required" }
+```
+
+  - Klien mengirimkan JSON yang salah format (misalnya, tanda kurung tutup hilang):  
+
+```json
+Request Body: { "name": "John", "email": "john@example.com"  
+Response: 
+Status: 400 Bad Request  
+Body: { "error": "Invalid JSON format" }
+
+```
 
 ### 3. **HTTP Status Code 500 (Internal Server Error)**  
 
@@ -458,4 +493,23 @@ tetapi penyebab spesifiknya tidak dapat dijelaskan dalam respons.
   - Masalah konfigurasi atau kesalahan sistem internal di server.
   - Server tidak dapat menangani permintaan karena kondisi tak terduga.
 
-- **Contoh JSON**
+- **Contoh Kasus**
+
+  - Klien meminta data produk dari endpoint `/products`, tetapi server mengalami kegagalan saat mengakses database karena koneksi terputus.
+    
+```json
+Request: GET /products  
+Response: 
+Status: 500 Internal Server Error  
+Body: { "error": "Database connection failed" }
+```
+
+  - Klien mencoba memperbarui data pengguna, tetapi ada bug di server yang menyebabkan operasi gagal:
+
+```json
+Request: PUT /users/123  
+Body: { "name": "John Doe" }
+Response: 
+Status: 500 Internal Server Error  
+Body: { "error": "Unexpected server error" }
+```
