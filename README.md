@@ -345,11 +345,15 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 **Swagger** adalah sebuah alat yang digunakan untuk mendokumentasikan dan mendesain API. Dengan Swagger,   
 pengembang dapat dengan mudah membuat, menguji, dan memahami cara kerja API, baik bagi klien maupun server.  
   
-- **Fitur Utama**:
-  - **OpenAPI Specification (OAS)**: Swagger mendukung spesifikasi OpenAPI untuk mendeskripsikan endpoint API secara standar.
-  - **Swagger UI**: Menyediakan antarmuka berbasis web untuk mencoba endpoint API secara interaktif.
-  - **Code Generation**: Dapat menghasilkan kode klien atau server berdasarkan dokumentasi API.
-  - **Kolaborasi**: Mempermudah kolaborasi antar tim dengan dokumentasi API yang selalu up-to-date.
+- **Fitur Utama**
+  - **OpenAPI Specification (OAS)**
+    Swagger mendukung spesifikasi OpenAPI untuk mendeskripsikan endpoint API secara standar.
+  - **Swagger UI**
+    Menyediakan antarmuka berbasis web untuk mencoba endpoint API secara interaktif.
+  - **Code Generation**
+    Dapat menghasilkan kode klien atau server berdasarkan dokumentasi API.
+  - **Kolaborasi**
+    Mempermudah kolaborasi antar tim dengan dokumentasi API yang selalu up-to-date.
   
 - **Keuntungan**:  
   - Mempermudah integrasi antar sistem.
@@ -364,12 +368,17 @@ Swagger banyak digunakan dalam proyek RESTful API untuk menjaga transparansi dan
 Postman digunakan oleh pengembang untuk memastikan API bekerja sesuai spesifikasi   
 dengan fitur antarmuka pengguna yang intuitif.
   
-- **Fitur Utama**:
-  - **API Testing**: Memungkinkan pengujian endpoint API dengan metode HTTP seperti GET, POST, PUT, DELETE, dll.
-  - **Environment Variables**: Mendukung penggunaan variabel untuk mengelola pengujian di berbagai lingkungan (development, staging, production).
-  - **Automation**: Menyediakan fitur untuk membuat pengujian otomatis melalui koleksi (collections) dan skrip.
-  - **API Documentation**: Dapat menghasilkan dokumentasi API secara langsung dari koleksi request.
-  - **Collaboration**: Fitur berbasis cloud untuk berbagi dan mengelola koleksi API antar tim.
+- **Fitur Utama**
+  - **API Testing**
+    Memungkinkan pengujian endpoint API dengan metode HTTP seperti GET, POST, PUT, DELETE, dll.
+  - **Environment Variables**
+    Mendukung penggunaan variabel untuk mengelola pengujian di berbagai lingkungan (development, staging, production).
+  - **Automation**
+    Menyediakan fitur untuk membuat pengujian otomatis melalui koleksi (collections) dan skrip.
+  - **API Documentation**
+    Dapat menghasilkan dokumentasi API secara langsung dari koleksi request.
+  - **Collaboration**
+    Fitur berbasis cloud untuk berbagi dan mengelola koleksi API antar tim.
   
 **Keuntungan**:
 - Mudah digunakan, bahkan untuk pemula.
