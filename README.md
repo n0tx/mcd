@@ -4,6 +4,8 @@
 
 1. [Request Methods](#request-methods)  
 2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+3. [Aplikasi dokumentasi API](#aplikasi-dokumentasi-api)
+4. 
 
 
 ----
@@ -333,6 +335,29 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 ### Catatan
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
+
+----
+
+3. ## `Aplikasi dokumentasi API` | [Daftar Isi](#daftar-isi)
+
+### 1. **Swagger**
+
+**Swagger** adalah sebuah alat yang digunakan untuk mendokumentasikan dan mendesain API.  
+Dengan Swagger, pengembang dapat dengan mudah membuat, menguji, dan memahami cara kerja API, baik bagi klien maupun server.
+
+- **Fitur Utama**:
+ 1. OpenAPI Specification (OAS): Swagger mendukung spesifikasi OpenAPI untuk mendeskripsikan endpoint API secara standar.
+ 2. Swagger UI: Menyediakan antarmuka berbasis web untuk mencoba endpoint API secara interaktif.
+ 3. Code Generation: Dapat menghasilkan kode klien atau server berdasarkan dokumentasi API.
+ 4. Kolaborasi: Mempermudah kolaborasi antar tim dengan dokumentasi API yang selalu up-to-date.
+
+- **Keuntungan**:
+ - Mempermudah integrasi antar sistem.
+ - Mengurangi kesalahan pemahaman karena dokumentasi otomatis.
+ - Mendukung hampir semua bahasa pemrograman dan platform API modern.
+ - Swagger banyak digunakan dalam proyek RESTful API untuk menjaga transparansi dan efisiensi pengembangan.
+
+
 
 ----
 
