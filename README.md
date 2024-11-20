@@ -6,6 +6,9 @@
 2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 
 
+--
+
+
 1. ## `Request Methods` | [Daftar Isi](#daftar-isi)
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
