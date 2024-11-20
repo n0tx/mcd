@@ -5,6 +5,7 @@
 1. [Request Methods](#request-methods)
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
+4. [HTTP Status Code](#http-status-code)
 
 
 ----
@@ -520,3 +521,4 @@ Body: { "error": "Unexpected server error" }
 | 200              | Success          | Permintaan berhasil diproses.                                                   |
 | 400              | Client Error     | Permintaan tidak valid atau ada kesalahan dari klien.                           |
 | 500              | Server Error     | Terjadi kesalahan di server saat memproses permintaan, biasanya bukan kesalahan dari klien. |
+
