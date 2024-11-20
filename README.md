@@ -10,7 +10,7 @@
 
 ---
 
-1. ## `Request Methods`
+1. ## `Request Methods` | [Daftar Isi](#daftar-isi)
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
 melalui protokol HTTP.   
@@ -259,7 +259,7 @@ Allow: GET, POST, PUT, DELETE
 
 ---
 
-2. ## `Form-data dan x-www-form-urlencoded`
+2. ## `Form-data dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
@@ -290,8 +290,6 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 
 - **Kekurangan**
   - Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
-
-[Daftar Isi](#daftar-isi)
 
 ### 2. **x-www-form-urlencoded**
 
@@ -340,11 +338,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
 
 [Daftar Isi](#daftar-isi)
 
-
-## Using-Docker
-
-asdfasdfasdf
-
+## [Daftar Isi](#daftar-isi)
 
 
 
