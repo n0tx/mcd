@@ -1,7 +1,5 @@
 # Technical Information
 
----
-
 ## Daftar Isi
 
 1. [Request Methods](#request-methods)  
