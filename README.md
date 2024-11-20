@@ -5,7 +5,7 @@
 1. [Request Methods](#request-methods)  
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
-4. [HTTP Status Code](#http-status)
+4. [HTTP Status Code](#http-status-code)
 
 
 ----
@@ -391,13 +391,14 @@ Postman banyak digunakan dalam pengembangan API modern karena fleksibilitas dan 
 
 4. ## `HTTP Status Code` | [Daftar Isi](#daftar-isi)  
   
-**HTTP status code**  
-kode respons yang diberikan oleh server untuk menunjukkan status permintaan HTTP yang dilakukan oleh klien.  
+**HTTP status code**  adalah kode respons yang diberikan oleh server untuk menunjukkan status permintaan HTTP yang dilakukan oleh klien.  
 
 Berikut adalah penjelasan untuk status code **200**, **400**, dan **500**  
   
 ### 1. **HTTP Status Code 200 (OK)**
+
 - **Pengertian**
+
 Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server tanpa masalah.
 
 - **Konteks Penggunaan**
@@ -411,7 +412,8 @@ Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server
 ### 2. **HTTP Status Code 400 (Bad Request)**
 
 - **Pengertian**
-Status ini menunjukkan bahwa permintaan yang dikirim oleh klien tidak valid atau tidak dapat dipahami oleh server.
+
+Status ini menunjukkan bahwa permintaan yang dikirim oleh klien tidak valid atau tidak dapat dipahami oleh server.  
 Ini biasanya terjadi karena kesalahan dari sisi klien.
 
 - **Konteks Penggunaan**
@@ -421,9 +423,11 @@ Ini biasanya terjadi karena kesalahan dari sisi klien.
 
 - **Contoh JSON**
 
-### 3. **HTTP Status Code 500 (Internal Server Error)**
+### 3. **HTTP Status Code 500 (Internal Server Error)**  
+
 - **Pengertian**
-Status ini menunjukkan bahwa terjadi kesalahan di sisi server saat memproses permintaan,
+
+Status ini menunjukkan bahwa terjadi kesalahan di sisi server saat memproses permintaan,  
 tetapi penyebab spesifiknya tidak dapat dijelaskan dalam respons.
 
 - **Konteks Penggunaan**
