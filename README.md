@@ -433,7 +433,7 @@ Status ini menunjukkan bahwa permintaan dari klien berhasil diproses oleh server
   
   Klien meminta daftar produk dari API dengan endpoint /products, dan server mengembalikan data daftar produk dalam format JSON.
 
-```json
+```
 Status: 200 OK  
 Body: [
   { "id": 1, "name": "Laptop" },
@@ -462,7 +462,7 @@ Ini biasanya terjadi karena kesalahan dari sisi klien.
 
   - Klien mengirimkan permintaan untuk menambahkan pengguna baru ke endpoint `/users`, tetapi tidak menyertakan data wajib seperti `email`:
   
-```json
+```
 Request: POST /users  
 Body: { "name": "John" }
 Response: 
@@ -472,7 +472,7 @@ Body: { "error": "Email is required" }
 
   - Klien mengirimkan JSON yang salah format (misalnya, tanda kurung tutup hilang):  
 
-```json
+```
 Request Body: { "name": "John", "email": "john@example.com"  
 Response: 
 Status: 400 Bad Request  
@@ -497,7 +497,7 @@ tetapi penyebab spesifiknya tidak dapat dijelaskan dalam respons.
 
   - Klien meminta data produk dari endpoint `/products`, tetapi server mengalami kegagalan saat mengakses database karena koneksi terputus.
     
-```json
+```
 Request: GET /products  
 Response: 
 Status: 500 Internal Server Error  
@@ -506,7 +506,7 @@ Body: { "error": "Database connection failed" }
 
   - Klien mencoba memperbarui data pengguna, tetapi ada bug di server yang menyebabkan operasi gagal:
 
-```json
+```
 Request: PUT /users/123  
 Body: { "name": "John Doe" }
 Response: 
