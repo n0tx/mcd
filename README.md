@@ -3,7 +3,7 @@
 ## Daftar Isi
 
 1. [Request Methods](#request-methods)
-2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
+2. [Form-data dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 
 
 ----
@@ -258,7 +258,7 @@ Allow: GET, POST, PUT, DELETE
   
 ---
 
-2. ## `Form-data Dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
+2. ## `Form-data dan x-www-form-urlencoded` | [Daftar Isi](#daftar-isi)
 
 **Form-data** dan **x-www-form-urlencoded** adalah dua format yang digunakan untuk mengirim data melalui HTTP request,   
 terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jenis data yang dikirim.  
