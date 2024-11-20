@@ -512,3 +512,11 @@ Response:
 Status: 500 Internal Server Error  
 Body: { "error": "Unexpected server error" }
 ```
+
+### Kesimpulan Singkat:  
+
+| **Status Code** | **Kategori**     | **Arti Singkat**                                                                 |
+|------------------|------------------|----------------------------------------------------------------------------------|
+| 200              | Success          | Permintaan berhasil diproses.                                                   |
+| 400              | Client Error     | Permintaan tidak valid atau ada kesalahan dari klien.                           |
+| 500              | Server Error     | Terjadi kesalahan di server saat memproses permintaan, biasanya bukan kesalahan dari klien. |
