@@ -9,7 +9,7 @@
 ----
 
 
-1. ## `Request Methods` | \[Daftar Isi](#daftar-isi)
+1. ## `Request Methods` | \ [Daftar Isi](#daftar-isi)
 
 Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
 melalui protokol HTTP.   
