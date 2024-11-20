@@ -477,7 +477,6 @@ Request Body: { "name": "John", "email": "john@example.com"
 Response: 
 Status: 400 Bad Request  
 Body: { "error": "Invalid JSON format" }
-
 ```
 
 ### 3. **HTTP Status Code 500 (Internal Server Error)**  
