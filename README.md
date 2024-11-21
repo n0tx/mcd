@@ -536,9 +536,7 @@ https://github.com/n0tx/simple-login-auth
 
 ### 1. **Login**
 
-- #### **Kirim payload**
-
-  - **Login request payload**
+- **Login request payload**
 
 ```json
  {
@@ -550,7 +548,6 @@ https://github.com/n0tx/simple-login-auth
 - #### **Login Code**  
 
   - **AuthController.java**
-    
   
 ```java
 // Login Endpoint
@@ -568,7 +565,6 @@ public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest re
 }
 ```
 
-  
   - **AuthService.java**
 
 ```java
@@ -596,7 +592,7 @@ public String login(String username, String password) {
 }
 ```  
 
-- **Response Login Code**
+- **Response Code**
 
   - **AuthResponse.java**  
 
