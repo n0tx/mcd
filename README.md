@@ -580,6 +580,7 @@ https://github.com/n0tx/simple-login-auth
 - **Mendapatkan response yang berisi status, message, dan data**
 
   - **Json Login Response**
+    
     ```json
     {
         "status": "success",
