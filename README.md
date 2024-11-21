@@ -258,7 +258,7 @@ HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
 
-<< [Daftar Isi](#daftar-isi)
+[ [Daftar Isi](#daftar-isi) ]
 ---
 
 2. ## `Form-data dan x-www-form-urlencoded`
