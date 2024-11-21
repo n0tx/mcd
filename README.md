@@ -950,9 +950,7 @@ except Exception as e:
 
 8. ## `WebSocket antara klien dan API`
 
-**WebSocket** adalah protokol komunikasi yang memungkinkan komunikasi dua arah secara real-time antara klien dan server.   
-Penerapan WebSocket melibatkan pengaturan server untuk mendukung koneksi WebSocket dan klien untuk membuka dan berkomunikasi   
-melalui koneksi tersebut.
+**WebSocket** adalah protokol komunikasi yang memungkinkan komunikasi dua arah secara real-time antara klien dan server. Penerapan WebSocket melibatkan pengaturan server untuk mendukung koneksi WebSocket dan klien untuk membuka dan berkomunikasi melalui koneksi tersebut.
 
 Berikut adalah contoh sederhana penerapan WebSocket:
 
