@@ -342,7 +342,6 @@ Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jen
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
 
 << [Daftar Isi](#daftar-isi)
-
 ----
 
 3. ## `Aplikasi Dokumentasi API`
@@ -415,7 +414,6 @@ dengan fitur antarmuka pengguna yang intuitif.
 Postman banyak digunakan dalam pengembangan API modern karena fleksibilitas dan kemudahan penggunaannya.
 
 << [Daftar Isi](#daftar-isi)
-
 ----
 
 4. ## `HTTP Status Code`
@@ -532,7 +530,6 @@ Body: { "error": "Unexpected server error" }
 
 
 << [Daftar Isi](#daftar-isi)
-
 ----
 
 5. ## `Proses Login Dan Authentication`
@@ -738,7 +735,6 @@ https://github.com/n0tx/simple-login-auth
     ```
 
 << [Daftar Isi](#daftar-isi)
-
 ----
     
 6. ## `Face recognition antara klien dan API`
@@ -950,7 +946,6 @@ except Exception as e:
 
 
 << [Daftar Isi](#daftar-isi)
-
 ----
 
 8. ## `WebSocket antara klien dan API`
@@ -981,4 +976,3 @@ https://github.com/n0tx/websocket
   - Mendengarkan pesan dari server dan mengirim pesan ke server.
   - Menampilkan pesan di halaman web.
 
-<< [Daftar Isi](#daftar-isi)
