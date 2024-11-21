@@ -686,7 +686,7 @@ https://github.com/n0tx/simple-login-auth
     
 - **Authentication Response Code**
 
-Menggunakan template response yang sama seperti pada proses login  
+  Menggunakan template response yang sama seperti pada proses login  
 
   - **AuthResponse.java**
     ```java
