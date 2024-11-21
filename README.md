@@ -106,7 +106,7 @@ Content-Type: application/json
   
 - **Ciri-ciri**
 
-  - Idempotent (Permintaan yang sama menghasilkan hasil yang sama).
+  Idempotent (Permintaan yang sama menghasilkan hasil yang sama).
 
 - **Contoh Request**
 
@@ -147,7 +147,7 @@ Content-Type: application/json
   
 - **Ciri-ciri**
 
-  - Idempotent (dengan asumsi data yang sama dikirim dalam setiap request).
+  Idempotent (dengan asumsi data yang sama dikirim dalam setiap request).
 
 - **Contoh Request**
 
@@ -182,11 +182,11 @@ Content-Type: application/json
   
 - **Contoh Penggunaan**
 
-  - Menghapus akun pengguna.
+  Menghapus akun pengguna.
   
 - **Ciri-ciri**
 
-  - Idempotent (jika data sudah terhapus, request berikutnya tidak akan menyebabkan efek tambahan).
+  Idempotent (jika data sudah terhapus, request berikutnya tidak akan menyebabkan efek tambahan).
 
 - **Contoh Request**
 ```
@@ -210,7 +210,7 @@ Host: api.example.com
   
 - **Contoh Penggunaan**
 
-  - Memeriksa apakah suatu resource ada tanpa mengunduh kontennya.
+  Memeriksa apakah suatu resource ada tanpa mengunduh kontennya.
   
 - **Ciri-ciri**
 
@@ -238,11 +238,11 @@ Content-Length: 123
   
 - **Contoh Penggunaan**
 
-  - Memeriksa metode yang diperbolehkan sebelum melakukan request sebenarnya.
+  Memeriksa metode yang diperbolehkan sebelum melakukan request sebenarnya.
   
 - **Ciri-ciri**
 
-  - Aman dan idempotent.
+  Aman dan idempotent.
   
 - **Contoh Request**
 ```
@@ -290,7 +290,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   - Fleksibel untuk data besar.
 
 - **Kekurangan**
-  - Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
+  Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
 
 ### 2. **x-www-form-urlencoded**
 
