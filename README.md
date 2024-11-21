@@ -960,6 +960,11 @@ Berikut adalah contoh sederhana penerapan WebSocket:
 https://github.com/n0tx/websocket
 ```
 
+  
+![image](https://github.com/user-attachments/assets/046f0e06-9e35-4e85-9fa4-d52b15783b83)  
+
+  
+  
 ### Penjelasan Singkat
 
 1. **Server**:
@@ -970,7 +975,7 @@ https://github.com/n0tx/websocket
 
 2. **Client**:
 
-  - Membuka koneksi ke server WebSocket (ws://localhost:8080).
+  - Membuka koneksi ke server WebSocket (http://localhost:8080).
   - Mendengarkan pesan dari server dan mengirim pesan ke server.
   - Menampilkan pesan di halaman web.
 
