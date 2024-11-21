@@ -577,7 +577,7 @@ https://github.com/n0tx/simple-login-auth
     }
     ```
     
-- **Json Login Response**
+- **Login Response Json**
 
   Mendapatkan response yang berisi status, message, dan data
   
@@ -633,7 +633,97 @@ https://github.com/n0tx/simple-login-auth
     }
     ```
 
-### 2. **Authentication**
+### 2. **Authentication**  
+
+- **Authentication request payload**
+
+  ```json
+  {
+      "token": "dummy-token-admin"
+  }
+  ```
+
+- **Authentication Code**  
+
+  - **AuthController.java**
+
+    ```java
+    // Authentication Endpoint
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthResponse<String>> authenticate(@RequestBody AuthToken token) {
+        boolean isValid = authService.authenticate(token.getToken());
+        if (isValid) {
+            return ResponseEntity.ok(new AuthResponse<>(
+                    "success", "Authentication successful", "You are authenticated!"
+            ));
+        }
+        return ResponseEntity.status(403).body(new AuthResponse<>(
+                "error", "Invalid or expired token", null
+        ));
+    }
+    ```
+    
+  - **AuthService.java**
+    ```java
+    // Autentikasi Method
+    public boolean authenticate(String token) {
+        // Dummy check for token validation
+        return token != null && token.startsWith("dummy-token-");
+    }
+    ```
+    
+- **Authentication Response Json**
+
+  Mendapatkan response yang berisi status, message, dan data
+  
+    ```json
+    {
+        "status": "success",
+        "message": "Authentication successful",
+        "data": "You are authenticated!"
+    }
+    ```
+    
+- **Authentication Response Code**
+  - **AuthResponse.java**
+    ```java
+    package com.riki.auth.dto;
+
+    public class AuthResponse<T> {
+        private String status;
+        private String message;
+        private T data;
+    
+        public AuthResponse(String status, String message, T data) {
+            this.status = status;
+            this.message = message;
+            this.data = data;
+        }
+    
+        // Getters and Setters
+    
+    }
+    ```
+
+  - **AuthToken.java**
+    ```java
+    package com.riki.auth.model;
+
+
+    public class AuthToken {
+        private String token;
+    
+        // Default constructor
+        public AuthToken() {}
+    
+        public AuthToken(String token) {
+            this.token = token;
+        }
+    
+        // Getter and Setter
+        
+    }
+    ```
 
 
 
