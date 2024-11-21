@@ -7,6 +7,8 @@
 3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 4. [HTTP Status Code](#http-status-code)
 5. [Proses Login Dan Authentication](#proses-login-dan-authentication)
+6. [Face recognition antara klien dan API](#face-recognition-antara-klien-dan-API)
+7. [WebSocket antara klien dan API](#websocket-antara-klien-dan-api)
 
 
 ----
@@ -727,6 +729,238 @@ https://github.com/n0tx/simple-login-auth
         
     }
     ```
+  
+----
+    
+6. ## `Face recognition antara klien dan API`
+
+Penerapan **face recognition** antara klien dan API umumnya melibatkan pengiriman gambar wajah ke server melalui API. 
+Server akan memproses gambar tersebut menggunakan pustaka atau layanan **face recognition** dan mengembalikan hasil seperti identitas, 
+keakuratan pencocokan, atau status validasi.
+
+Berikut adalah gambaran langkah-langkah dan contoh kode sederhana.  
+
+### Gambaran Alur Face Recognition  
+
+1. **Client Side**
+
+   - Klien mengambil gambar wajah menggunakan kamera (atau mengunggah file).
+   - Gambar dikirim ke server melalui API dalam format form-data atau base64.
+
+2. **Server Side**
+
+   - Server menerima gambar melalui endpoint.
+   - Server memproses gambar menggunakan pustaka face recognition seperti Face Recognition (Python), OpenCV, atau DeepFace.
+   - Server membandingkan hasil dengan database wajah yang ada dan mengembalikan hasil validasi.
+
+### Kode Client  
+
+```javascript
+const sendFaceRecognitionRequest = async (imageFile) => {
+    const formData = new FormData();
+    formData.append("file", imageFile);
+
+    try {
+        const response = await fetch("http://localhost:8080/api/face/recognize", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+        console.log("Response from server:", result);
+    } catch (error) {
+        console.error("Error during API call:", error);
+    }
+};
+
+// Simulate file upload (e.g., from an <input type="file"> element)
+const fileInput = document.querySelector("#fileInput");
+fileInput.addEventListener("change", (event) => {
+    const imageFile = event.target.files[0];
+    sendFaceRecognitionRequest(imageFile);
+});
+```
+   
+### Kode Server  
+
+Berikut adalah contoh server Spring Boot yang menerima gambar dan memprosesnya menggunakan pustaka Python untuk face recognition.  
+
+1. **Endpoint untuk Face Recognition**
+
+**FaceController.java**
+
+```java
+package com.example.face;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+
+@RestController
+@RequestMapping("/api/face")
+public class FaceController {
+
+    @PostMapping("/recognize")
+    public ResponseEntity<FaceResponse> recognizeFace(@RequestParam("file") MultipartFile file) {
+        try {
+            // Simpan file sementara di server
+            File tempFile = File.createTempFile("face-", ".jpg");
+            file.transferTo(tempFile);
+
+            // Panggil script Python untuk face recognition
+            ProcessBuilder processBuilder = new ProcessBuilder("python3", "face_recognition.py", tempFile.getAbsolutePath());
+            Process process = processBuilder.start();
+            process.waitFor();
+
+            // Baca hasil dari script Python
+            String result = new String(process.getInputStream().readAllBytes());
+
+            // Hapus file sementara
+            tempFile.delete();
+
+            // Return hasil ke client
+            return ResponseEntity.ok(new FaceResponse("success", "Face recognition completed", result));
+
+        } catch (IOException | InterruptedException e) {
+            return ResponseEntity.status(500).body(new FaceResponse("error", "Failed to process face recognition", null));
+        }
+    }
+}
+```
+2. **Model Response**
+
+**FaceResponse.java**
+
+```java
+package com.example.face;
+
+public class FaceResponse {
+    private String status;
+    private String message;
+    private String data;
+
+    public FaceResponse(String status, String message, String data) {
+        this.status = status;
+        this.message = message;
+        this.data = data;
+    }
+
+    // Getters and Setters
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+}
+```
 
 
+3. **Script Python untuk Face Recognition**
 
+**face_recognition.py**
+
+```java
+import face_recognition
+import sys
+
+# Ambil file gambar dari argumen
+image_path = sys.argv[1]
+
+try:
+    # Load gambar
+    image = face_recognition.load_image_file(image_path)
+
+    # Ekstraksi encoding wajah
+    face_encodings = face_recognition.face_encodings(image)
+
+    if len(face_encodings) > 0:
+        print("Face recognized. Encoding extracted.")
+    else:
+        print("No face detected in the image.")
+except Exception as e:
+    print(f"Error processing image: {str(e)}")
+```
+
+### Contoh Response
+
+- **Input**: Gambar wajah yang valid.
+
+- **Output(Server)**: Gambar wajah yang valid.
+
+```json
+{
+    "status": "success",
+    "message": "Face recognition completed",
+    "data": "Face recognized. Encoding extracted."
+}
+```
+
+- **Input**: Gambar wajah tanpa wajah.
+
+- **Output(Server)**: Gambar wajah yang valid.
+
+```json
+{
+    "status": "success",
+    "message": "Face recognition completed",
+    "data": "No face detected in the image."
+}
+```
+
+### Penjelasan
+
+1. **Client**: Mengirim file gambar menggunakan Fetch API.
+2. **Server (Java Spring Boot)**:
+- Menyimpan gambar sementara.
+- Memproses gambar menggunakan script Python.
+- Membaca hasil dan mengembalikannya ke klien.
+3. **Python Script**: Menggunakan pustaka face_recognition untuk mendeteksi wajah dan mengekstraksi encoding.
+
+----
+
+8. ## `WebSocket antara klien dan API`
+
+**WebSocket** adalah protokol komunikasi yang memungkinkan komunikasi dua arah secara real-time antara klien dan server.   
+Penerapan WebSocket melibatkan pengaturan server untuk mendukung koneksi WebSocket dan klien untuk membuka dan berkomunikasi   
+melalui koneksi tersebut.
+
+Berikut adalah contoh sederhana penerapan WebSocket:
+
+**Source Code Link**
+
+```
+https://github.com/n0tx/websocket
+```
+
+### Penjelasan Singkat
+
+1. **Server**:
+- Membuat server WebSocket di port 8080.
+- Menerima dan merespons pesan dari klien.
+- Menangani koneksi masuk dan keluar.
+
+1. **Client**:
+- Membuka koneksi ke server WebSocket (ws://localhost:8080).
+- Mendengarkan pesan dari server dan mengirim pesan ke server.
+- Menampilkan pesan di halaman web.
