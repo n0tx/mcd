@@ -540,12 +540,14 @@ https://github.com/n0tx/simple-login-auth
 
   - **Login request payload**
 
-    ```json
+			```json
     {
         "username": "admin",
         "password": "password123"
     }
-    ```
+    ```  
+
+- **Login Code**  
 
   - **AuthController.java**
     
@@ -591,7 +593,9 @@ https://github.com/n0tx/simple-login-auth
             "token": "dummy-token-admin"
         }
     }
-    ```
+    ```  
+
+- **Response Login Code**
 
   - **AuthResponse.java**  
 
