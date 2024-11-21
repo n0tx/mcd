@@ -785,7 +785,7 @@ fileInput.addEventListener("change", (event) => {
 
 Berikut adalah contoh server Spring Boot yang menerima gambar dan memprosesnya menggunakan pustaka Python untuk face recognition.  
 
-1. **Endpoint untuk Face Recognition**
+### 1. **Endpoint untuk Face Recognition**
 
 **FaceController.java**
 
@@ -830,7 +830,7 @@ public class FaceController {
     }
 }
 ```
-2. **Model Response**
+### 2. **Model Response**
 
 **FaceResponse.java**
 
@@ -876,7 +876,7 @@ public class FaceResponse {
 ```
 
 
-3. **Script Python untuk Face Recognition**
+### 3. **Script Python untuk Face Recognition**
 
 **face_recognition.py**
 
