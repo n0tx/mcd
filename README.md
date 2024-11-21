@@ -6,7 +6,7 @@
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 4. [HTTP Status Code](#http-status-code)
-5. [Proses Login Dan Basic Authentication Menggunakan Spring Security](#proses-login-dan-basic-authentication-menggunakan-spring-security)
+5. [Proses Login Dan Basic Authentication](#proses-login-dan-basic-authentication)
 
 
 ----
@@ -526,4 +526,6 @@ Body: { "error": "Unexpected server error" }
 
 ----
 
-5. ## `Proses Login Dan Basic Authentication Menggunakan Spring Security`
+5. ## `Proses Login Dan Basic Authentication`
+
+Proses Login Dan Basic Authentication Menggunakan Spring Security
