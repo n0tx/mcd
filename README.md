@@ -552,92 +552,92 @@ https://github.com/n0tx/simple-login-auth
   - **AuthController.java**
     
   
-    ```java
-    // Login Endpoint
-    @PostMapping("/login")
-    public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest request) {
-        String token = authService.login(request.getUsername(), request.getPassword());
-        if (token != null) {
-            return ResponseEntity.ok(new AuthResponse<>(
-                    "success", "Login successful", new AuthToken(token)
-            ));
-        }
-        return ResponseEntity.status(401).body(new AuthResponse<>(
-                "error", "Invalid username or password", null
+```java
+// Login Endpoint
+@PostMapping("/login")
+public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest request) {
+    String token = authService.login(request.getUsername(), request.getPassword());
+    if (token != null) {
+        return ResponseEntity.ok(new AuthResponse<>(
+                "success", "Login successful", new AuthToken(token)
         ));
     }
-    ```
+    return ResponseEntity.status(401).body(new AuthResponse<>(
+            "error", "Invalid username or password", null
+    ));
+}
+```
   
   - **AuthService.java**
 
-    ```java
-    // Login Method
-    public String login(String username, String password) {
-        if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
-            // Generate a dummy token
-            return "dummy-token-" + username;
-        }
-        return null;
+```java
+// Login Method
+public String login(String username, String password) {
+    if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
+        // Generate a dummy token
+        return "dummy-token-" + username;
     }
-    ```
+    return null;
+}
+```
 
 - **Mendapatkan response yang berisi status, message, dan data**
 
   - **Json Login Response**  
 
-    ```json
-    {
-        "status": "success",
-        "message": "Login successful",
-        "data": {
-            "token": "dummy-token-admin"
-        }
+```json
+{
+    "status": "success",
+    "message": "Login successful",
+    "data": {
+        "token": "dummy-token-admin"
     }
-    ```  
+}
+```  
 
 - **Response Login Code**
 
   - **AuthResponse.java**  
 
-    ```java
-    package com.riki.auth.dto;
-    
-    public class AuthResponse<T> {
-        private String status;
-        private String message;
-        private T data;
-    
-        public AuthResponse(String status, String message, T data) {
-            this.status = status;
-            this.message = message;
-            this.data = data;
-        }
-    
-        // Getters and Setters
-    
+```java
+package com.riki.auth.dto;
+
+public class AuthResponse<T> {
+    private String status;
+    private String message;
+    private T data;
+
+    public AuthResponse(String status, String message, T data) {
+        this.status = status;
+        this.message = message;
+        this.data = data;
     }
-    ```
+
+    // Getters and Setters
+
+}
+```
 
   - **AuthResponse.java**  
 
-    ```java
-    package com.riki.auth.model;
-    
-    
-    public class AuthToken {
-        private String token;
-    
-        // Default constructor
-        public AuthToken() {}
-    
-        public AuthToken(String token) {
-            this.token = token;
-        }
-    
-        // Getter and Setter
-        
+```java
+package com.riki.auth.model;
+
+
+public class AuthToken {
+    private String token;
+
+    // Default constructor
+    public AuthToken() {}
+
+    public AuthToken(String token) {
+        this.token = token;
     }
-    ```
+
+    // Getter and Setter
+    
+}
+```
 
 
 
