@@ -258,7 +258,7 @@ HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
 
-[ [Daftar Isi](#daftar-isi) ]
+<< [Daftar Isi](#daftar-isi)
 ---
 
 2. ## `Form-data dan x-www-form-urlencoded`
@@ -341,6 +341,8 @@ Keduanya memiliki karakteristik dan cara kerja yang berbeda, tergantung pada jen
 - **`form-data`** lebih fleksibel untuk aplikasi yang membutuhkan pengiriman file atau data kompleks. 
 - **`x-www-form-urlencoded`** lebih cocok untuk aplikasi yang hanya mengirimkan data teks sederhana seperti login atau query string.
 
+<< [Daftar Isi](#daftar-isi)
+
 ----
 
 3. ## `Aplikasi Dokumentasi API`
@@ -411,7 +413,9 @@ dengan fitur antarmuka pengguna yang intuitif.
 - Menghemat waktu dengan koleksi yang dapat dieksekusi ulang.
   
 Postman banyak digunakan dalam pengembangan API modern karena fleksibilitas dan kemudahan penggunaannya.
-  
+
+<< [Daftar Isi](#daftar-isi)
+
 ----
 
 4. ## `HTTP Status Code`
@@ -526,6 +530,8 @@ Body: { "error": "Unexpected server error" }
 | 400              | Client Error     | Permintaan tidak valid atau ada kesalahan dari klien.                           |
 | 500              | Server Error     | Terjadi kesalahan di server saat memproses permintaan, biasanya bukan kesalahan dari klien. |
 
+
+<< [Daftar Isi](#daftar-isi)
 
 ----
 
@@ -730,7 +736,9 @@ https://github.com/n0tx/simple-login-auth
         
     }
     ```
-  
+
+<< [Daftar Isi](#daftar-isi)
+
 ----
     
 6. ## `Face recognition antara klien dan API`
@@ -940,6 +948,9 @@ except Exception as e:
 
 3. **Python Script**: Menggunakan pustaka face_recognition untuk mendeteksi wajah dan mengekstraksi encoding.
 
+
+<< [Daftar Isi](#daftar-isi)
+
 ----
 
 8. ## `WebSocket antara klien dan API`
@@ -970,4 +981,4 @@ https://github.com/n0tx/websocket
   - Mendengarkan pesan dari server dan mengirim pesan ke server.
   - Menampilkan pesan di halaman web.
 
-
+<< [Daftar Isi](#daftar-isi)
