@@ -6,7 +6,7 @@
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
 3. [Aplikasi Dokumentasi API](#aplikasi-dokumentasi-api)
 4. [HTTP Status Code](#http-status-code)
-5. [Proses Login Dan Basic Authentication](#proses-login-dan-basic-authentication)
+5. [Proses Login Dan Authentication](#proses-login-dan-authentication)
 
 
 ----
@@ -515,7 +515,7 @@ Status: 500 Internal Server Error
 Body: { "error": "Unexpected server error" }
 ```
 
-### Kesimpulan Singkat:  
+### Kesimpulan Singkat  
 
 | **Status Code** | **Kategori**     | **Arti Singkat**                                                                 |
 |------------------|------------------|----------------------------------------------------------------------------------|
@@ -526,7 +526,31 @@ Body: { "error": "Unexpected server error" }
 
 ----
 
-5. ## `Proses Login Dan Basic Authentication`
+5. ## `Proses Login Dan Authentication`
+
+### `Source Code Link`:  
+
+**Source Code Link**
+
+```
+https://github.com/n0tx/simple-login-auth
+```
+
+### 1. **Login**
+
+- **Mengirim payload**
+
+```java
+// Login Method
+public String login(String username, String password) {
+    if (userDatabase.containsKey(username) && userDatabase.get(username).equals(password)) {
+        // Generate a dummy token
+        return "dummy-token-" + username;
+    }
+    return null;
+}
+
+
 
 
 
