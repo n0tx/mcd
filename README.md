@@ -536,7 +536,7 @@ https://github.com/n0tx/simple-login-auth
 
 ### 1. **Login**
 
-- **Kirim payload**
+- #### **Kirim payload**
 
   - **Login request payload**
 
@@ -547,7 +547,7 @@ https://github.com/n0tx/simple-login-auth
  }
  ```
 
-- **Login Code**  
+- #### **Login Code**  
 
   - **AuthController.java**
     
@@ -567,6 +567,7 @@ public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest re
     ));
 }
 ```
+
   
   - **AuthService.java**
 
@@ -581,7 +582,7 @@ public String login(String username, String password) {
 }
 ```
 
-- **Mendapatkan response yang berisi status, message, dan data**
+- #### **Mendapatkan response yang berisi status, message, dan data**
 
   - **Json Login Response**  
 
