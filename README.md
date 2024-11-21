@@ -1,6 +1,6 @@
 # Technical Information
 
-## Daftar Isi
+## [Daftar Isi](#daftar-isi)
 
 1. [Request Methods](#request-methods)
 2. [Form-data Dan x-www-form-urlencoded](#form-data-dan-x-www-form-urlencoded)
@@ -257,7 +257,8 @@ Host: api.example.com
 HTTP/1.1 204 No Content
 Allow: GET, POST, PUT, DELETE
 ```
-  
+
+Daftar Isi
 ---
 
 2. ## `Form-data dan x-www-form-urlencoded`
