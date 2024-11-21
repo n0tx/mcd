@@ -540,12 +540,12 @@ https://github.com/n0tx/simple-login-auth
 
   - **Login request payload**
 
-			```json
-    {
-        "username": "admin",
-        "password": "password123"
-    }
-    ```  
+```json
+ {
+     "username": "admin",
+     "password": "password123"
+ }
+ ```
 
 - **Login Code**  
 
