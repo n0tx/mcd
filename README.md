@@ -538,32 +538,33 @@ https://github.com/n0tx/simple-login-auth
 
 - **Kirim payload**
 
-  - **Json Login Request Payload** 
+  - Payload login request
 
-  ```json
-  {
-      "username": "admin",
-      "password": "password123"
+    ```json
+    {
+        "username": "admin",
+        "password": "password123"
+    }
+    ```
+
+  - *AuthController.java*
+    
+  
+  ```java
+  // Login Endpoint
+  @PostMapping("/login")
+  public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest request) {
+      String token = authService.login(request.getUsername(), request.getPassword());
+      if (token != null) {
+          return ResponseEntity.ok(new AuthResponse<>(
+                  "success", "Login successful", new AuthToken(token)
+          ));
+      }
+      return ResponseEntity.status(401).body(new AuthResponse<>(
+              "error", "Invalid username or password", null
+      ));
   }
   ```
-
-  - **AuthController.java**
-
-```java
-// Login Endpoint
-@PostMapping("/login")
-public ResponseEntity<AuthResponse<AuthToken>> login(@RequestBody AuthRequest request) {
-    String token = authService.login(request.getUsername(), request.getPassword());
-    if (token != null) {
-        return ResponseEntity.ok(new AuthResponse<>(
-                "success", "Login successful", new AuthToken(token)
-        ));
-    }
-    return ResponseEntity.status(401).body(new AuthResponse<>(
-            "error", "Invalid username or password", null
-    ));
-}
-```
   
 **AuthService.java**
 
