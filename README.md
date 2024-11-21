@@ -577,9 +577,8 @@ https://github.com/n0tx/simple-login-auth
     }
     ```
     
-- **Mendapatkan response yang berisi status, message, dan data**
-
-  - **Json Login Response**
+- **Json Login Response**
+  Mendapatkan response yang berisi status, message, dan data
     
     ```json
     {
@@ -591,7 +590,7 @@ https://github.com/n0tx/simple-login-auth
     }
     ```
     
-- **Response Code**
+- **Login Response Code**
 
   - **AuthResponse.java**
     ```java
