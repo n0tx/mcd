@@ -932,9 +932,11 @@ except Exception as e:
 
 1. **Client**: Mengirim file gambar menggunakan Fetch API.
 2. **Server (Java Spring Boot)**:
+
   - Menyimpan gambar sementara.
   - Memproses gambar menggunakan script Python.
   - Membaca hasil dan mengembalikannya ke klien.
+
 3. **Python Script**: Menggunakan pustaka face_recognition untuk mendeteksi wajah dan mengekstraksi encoding.
 
 ----
@@ -956,11 +958,13 @@ https://github.com/n0tx/websocket
 ### Penjelasan Singkat
 
 1. **Server**:
+
   - Membuat server WebSocket di port 8080.
   - Menerima dan merespons pesan dari klien.
   - Menangani koneksi masuk dan keluar.
 
 2. **Client**:
+
   - Membuka koneksi ke server WebSocket (ws://localhost:8080).
   - Mendengarkan pesan dari server dan mengirim pesan ke server.
   - Menampilkan pesan di halaman web.
