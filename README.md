@@ -289,7 +289,7 @@ terutama dengan metode POST. Keduanya memiliki karakteristik dan cara kerja yang
   - Dapat menangani berbagai tipe data, termasuk binary.
   - Fleksibel untuk data besar.
 
-- **Kekurangan**
+- **Kekurangan**  
   Sedikit lebih rumit dan berat dibandingkan dengan x-www-form-urlencoded karena data dikirim dalam bentuk multipart.
 
 ### 2. **x-www-form-urlencoded**
