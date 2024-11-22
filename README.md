@@ -16,8 +16,8 @@
 
 1. ## `Request Methods`
 
-Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi dengan server   
-melalui protokol HTTP.   
+Request methods adalah cara yang digunakan oleh klien (seperti browser atau aplikasi) untuk berkomunikasi   
+dengan server melalui protokol HTTP.   
 
 Beberapa metode request yang umum digunakan:
 
